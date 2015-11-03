@@ -4,7 +4,7 @@ Package.describe({
   // Brief, one-line summary of the package.
   summary: 'Retrieve the size of a remotely hosted image.',
   // URL to the Git repository containing the source code for this package.
-  git: 'https://github.com/michelalbers/',
+  git: 'https://github.com/michelalbers/meteor-imagesize',
   // By default, Meteor will default to using README.md for documentation.
   // To avoid submitting documentation, set this field to null.
   documentation: null
@@ -17,7 +17,7 @@ Npm.depends({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.1.0.3');
-  api.use('promise');
+  api.use('promise@0.5.1');
   api.addFiles('imagesize.js', ['server']);
   api.export('Interwebs', 'server');
 });
